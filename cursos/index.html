@@ -1,0 +1,416 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+  <title>Valdomiro Ramos | Cursos Online de TI - Detalhes dos Cursos</title>
+  <!-- Bootstrap 5 + Icons + Google Fonts -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <style>
+    * {
+      font-family: 'Inter', sans-serif;
+    }
+    body {
+      background: #f5f7f2;
+    }
+    .navbar {
+      background: rgba(255,255,255,0.96);
+      backdrop-filter: blur(4px);
+      box-shadow: 0 2px 20px rgba(60,80,40,0.05);
+    }
+    .navbar-brand {
+      font-weight: 800;
+      font-size: 1.7rem;
+      background: linear-gradient(135deg, #2b5e3b, #4c8b4c);
+      background-clip: text;
+      -webkit-background-clip: text;
+      color: transparent;
+    }
+    .btn-primary-custom {
+      background: #2b5e3b;
+      border-radius: 40px;
+      padding: 0.7rem 1.8rem;
+      font-weight: 600;
+      transition: all 0.2s;
+      box-shadow: 0 4px 10px rgba(43,94,59,0.2);
+      border: none;
+      color: white;
+    }
+    .btn-primary-custom:hover {
+      background: #1e4529;
+      transform: translateY(-2px);
+      box-shadow: 0 8px 18px rgba(43,94,59,0.3);
+    }
+    .btn-outline-custom {
+      border: 2px solid #2b5e3b;
+      color: #2b5e3b;
+      border-radius: 40px;
+      font-weight: 600;
+      background: transparent;
+    }
+    .btn-outline-custom:hover {
+      background: #2b5e3b;
+      color: white;
+    }
+    .hero {
+      background: linear-gradient(105deg, #ffffff 0%, #eef5e6 100%);
+      padding: 4rem 0 3rem;
+      border-bottom: 1px solid #d0e0c0;
+    }
+    .badge-category {
+      background: #e2f0e2;
+      color: #2b5e3b;
+      border-radius: 40px;
+      font-weight: 500;
+      padding: 0.3rem 1rem;
+      font-size: 0.75rem;
+    }
+    .course-card {
+      border: none;
+      border-radius: 1.5rem;
+      background: white;
+      transition: all 0.25s ease;
+      box-shadow: 0 12px 25px -10px rgba(0,0,0,0.05);
+      height: 100%;
+      overflow: hidden;
+    }
+    .course-card:hover {
+      transform: translateY(-6px);
+      box-shadow: 0 25px 30px -12px rgba(60,80,40,0.2);
+    }
+    .course-img {
+      height: 260px;
+      object-fit: cover;
+      width: 100%;
+      background: #eef5e6;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 3rem;
+      color: #2b5e3b;
+    }
+    .btn-buy {
+      background: #2b5e3b;
+      color: white;
+      border-radius: 40px;
+      padding: 0.5rem 1.3rem;
+      font-weight: 500;
+      font-size: 0.85rem;
+      border: none;
+      transition: 0.2s;
+    }
+    .btn-buy:hover {
+      background: #1e4529;
+      transform: translateY(-2px);
+    }
+    .methodology-section {
+      background: white;
+      border-radius: 2rem;
+      padding: 3rem;
+      box-shadow: 0 8px 25px rgba(0,0,0,0.02);
+    }
+    .video-wrapper {
+      position: relative;
+      padding-bottom: 56.25%;
+      height: 0;
+      overflow: hidden;
+      border-radius: 1rem;
+      box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+      background: #000;
+    }
+    .video-wrapper iframe {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      border: 0;
+    }
+    .accordion-button:not(.collapsed) {
+      background: #eef5e6;
+      color: #2b5e3b;
+    }
+    .accordion-button:focus {
+      border-color: #4c8b4c;
+      box-shadow: 0 0 0 0.25rem rgba(43,94,59,0.25);
+    }
+    footer {
+      background: #1a2e22;
+      color: #cfdec4;
+    }
+    @media (max-width: 768px) {
+      .hero h1 {
+        font-size: 2rem;
+      }
+      .methodology-section {
+        padding: 1.5rem;
+      }
+    }
+  </style>
+</head>
+<body>
+
+<!-- NAVBAR (igual) -->
+<nav class="navbar navbar-expand-lg sticky-top">
+  <div class="container">
+    <a class="navbar-brand" href="#">Valdomiro<span style="color:#4c8b4c;"> Cursos</span></a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav ms-auto gap-2">
+        <li class="nav-item"><a class="nav-link fw-semibold" href="#cursos">Cursos</a></li>
+        <li class="nav-item"><a class="nav-link fw-semibold" href="#metodologia">Como são as aulas</a></li>
+        <li class="nav-item"><a class="nav-link fw-semibold" href="#sobre">Professor</a></li>
+        <li class="nav-item"><a class="nav-link fw-semibold" href="#faq">Dúvidas</a></li>
+        <li class="nav-item"><a class="nav-link fw-semibold" href="#contato">Contato</a></li>
+      </ul>
+      <a href="#cursos" class="btn btn-primary-custom ms-lg-3">Ver todos os cursos →</a>
+    </div>
+  </div>
+</nav>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="container">
+    <div class="row align-items-center g-4">
+      <div class="col-lg-7">
+        <h1 class="fw-bold display-5">Faça <span style="background: linear-gradient(120deg,#d8e8d0,#c0ddb2); padding:0 0.2rem;">Cursos e aulas On line</span> com um especialista com mais de 29 anos de experiência</h1>
+        <p class="lead text-secondary mt-3">Cursos online com certificado, suporte direto e acesso vitalício. Comece hoje mesmo!</p>
+        <div class="d-flex gap-3 mt-4 flex-wrap">
+          <a href="#cursos" class="btn btn-primary-custom px-4 py-2">Ver catálogo completo</a>
+          <a href="#sobre" class="btn btn-outline-custom px-4 py-2">Conheça Valdomiro</a>
+        </div>
+      </div>
+      <div class="col-lg-5 text-center">
+        <div class="bg-white p-4 rounded-4 shadow-sm">
+          <i class="bi bi-person-video3" style="font-size: 5rem; color:#2b5e3b;"></i>
+          <h3 class="fw-bold mt-2">Valdomiro Ramos</h3>
+          <p class="text-muted">Analista de Sistemas · Instrutor há 20+ anos</p>
+          <span class="badge bg-success bg-opacity-10 text-dark">+4500 alunos</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SEÇÃO METODOLOGIA COM VÍDEO (sem alteração) -->
+<section id="metodologia" class="py-5">
+  <div class="container">
+    <div class="methodology-section">
+      <div class="row align-items-center g-5">
+        <div class="col-lg-6">
+          <span class="badge-category mb-3 d-inline-block"><i class="bi bi-play-circle-fill me-1"></i> Aula demonstrativa</span>
+          <h2 class="fw-bold display-6">Como são os cursos e aulas?</h2>
+          <p class="lead mt-3 text-secondary">Aprenda de forma prática, com exemplos reais e suporte direto com o professor. Cada curso é dividido em módulos progressivos, com exercícios, projetos e material de apoio.</p>
+          <div class="row mt-4 g-3">
+            <div class="col-sm-6"><div class="d-flex align-items-center gap-2"><i class="bi bi-camera-reels fs-3 text-success"></i><span><strong>Aulas gravadas</strong><br>em alta definição</span></div></div>
+            <div class="col-sm-6"><div class="d-flex align-items-center gap-2"><i class="bi bi-chat-dots fs-3 text-success"></i><span><strong>Suporte direto</strong><br>com o professor</span></div></div>
+            <div class="col-sm-6"><div class="d-flex align-items-center gap-2"><i class="bi bi-file-pdf fs-3 text-success"></i><span><strong>Material para download</strong><br>exercícios guiados</span></div></div>
+            <div class="col-sm-6"><div class="d-flex align-items-center gap-2"><i class="bi bi-trophy fs-3 text-success"></i><span><strong>Certificado válido</strong><br>carga horária inclusa</span></div></div>
+          </div>
+          <div class="mt-4"><a href="#cursos" class="btn btn-primary-custom px-4">Conhecer os cursos agora →</a></div>
+        </div>
+        <div class="col-lg-6">
+          <div class="video-wrapper"><iframe src="https://www.youtube.com/embed/tpW5raDw0hk" title="Vídeo de apresentação" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div>
+          <p class="text-muted text-center mt-3 small">Assista ao vídeo e veja como as aulas são dinâmicas e práticas.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- TODOS OS CURSOS - Com botão Saiba Mais abrindo MODAL -->
+<section id="cursos" class="py-5">
+  <div class="container">
+    <div class="text-center mb-5">
+      <span class="badge bg-success bg-opacity-10 text-success px-3 py-2 rounded-pill">Catálogo profissional</span>
+      <h2 class="fw-bold mt-3">Todos os <span style="color:#2b5e3b;">cursos disponíveis</span></h2>
+      <p class="text-secondary col-lg-7 mx-auto">Clique em "Saiba mais" para ver os detalhes completos de cada curso. Depois, adquira com segurança via Hotmart.</p>
+    </div>
+    <div class="row g-4" id="cursosGrid"></div>
+  </div>
+</section>
+
+<!-- SOBRE O PROFESSOR -->
+<section id="sobre" class="py-5 bg-white">
+  <div class="container">
+    <div class="row g-5 align-items-center">
+      <div class="col-md-5 text-center">
+        <div class="bg-light rounded-4 p-4" style="background: #f4f8ef;"><i class="bi bi-award-fill" style="font-size: 4rem; color:#2b5e3b;"></i><h3 class="fw-bold mt-2">Valdomiro Ramos</h3><p>Graduado em Processamento de Dados - UNIMAR</p><hr><p><i class="bi bi-envelope"></i> valdomiro.ramoss@gmail.com</p><p><i class="bi bi-whatsapp"></i> (11) 98196-4264</p></div>
+      </div>
+      <div class="col-md-7"><span class="badge-category">+29 anos de experiência</span><h2 class="fw-bold mt-2">Ensino prático, focado no mercado</h2><p>Ajudei centenas de alunos a dominar Access, SQL, Python e Power BI. Meus cursos são diretos, com exercícios reais e suporte personalizado. Você aprende no seu ritmo e ainda tira dúvidas diretamente comigo.</p><div class="row mt-4"><div class="col-6"><i class="bi bi-check-circle-fill text-success"></i> Suporte por e-mail/WhatsApp</div><div class="col-6"><i class="bi bi-check-circle-fill text-success"></i> Certificado de conclusão</div><div class="col-6"><i class="bi bi-check-circle-fill text-success"></i> Projetos práticos</div><div class="col-6"><i class="bi bi-check-circle-fill text-success"></i> Acesso vitalício</div></div></div>
+    </div>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section id="faq" class="py-5" style="background: #f5f7f2;"><div class="container"><div class="text-center mb-4"><h2 class="fw-bold">Dúvidas comuns</h2><p class="text-secondary">Tire suas dúvidas antes de adquirir</p></div><div class="row justify-content-center"><div class="col-lg-8"><div class="accordion" id="faqAccordion"><div class="accordion-item"><h2 class="accordion-header"><button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#faq1">Como funciona o acesso?</button></h2><div id="faq1" class="accordion-collapse collapse show"><div class="accordion-body">Você recebe o acesso imediato por e-mail após a compra na Hotmart. Pode assistir pelo computador, tablet ou celular.</div></div></div><div class="accordion-item"><h2 class="accordion-header"><button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq2">Tem certificado?</button></h2><div id="faq2" class="accordion-collapse collapse"><div class="accordion-body">Sim, todos os cursos oferecem certificado de conclusão com carga horária.</div></div></div><div class="accordion-item"><h2 class="accordion-header"><button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq3">Posso tirar dúvidas com o professor?</button></h2><div id="faq3" class="accordion-collapse collapse"><div class="accordion-body">Sim! Você pode enviar dúvidas por e-mail ou WhatsApp. Respondo em até 24h úteis.</div></div></div></div></div></div></div></section>
+
+<!-- CONTATO -->
+<section id="contato" class="py-5 bg-white"><div class="container text-center"><h2 class="fw-bold">Fale comigo diretamente</h2><p class="text-secondary mb-4">Antes de comprar, se precisar de orientação, é só chamar.</p><div class="d-flex justify-content-center gap-3 flex-wrap"><a href="mailto:valdomiro.ramoss@gmail.com" class="btn btn-outline-custom px-4"><i class="bi bi-envelope"></i> E-mail</a><a href="https://api.whatsapp.com/send?phone=5511981964264" target="_blank" class="btn btn-primary-custom px-4"><i class="bi bi-whatsapp"></i> WhatsApp (11) 98196-4264</a></div></div></section>
+
+<!-- FOOTER -->
+<footer class="pt-5 pb-4"><div class="container"><div class="row"><div class="col-md-5"><h4 class="text-white fw-bold">Valdomiro Ramos</h4><p class="small">Cursos de informática, bancos de dados e análise de dados com qualidade e suporte real.</p></div><div class="col-md-4"><h6 class="text-white">Links úteis</h6><ul class="list-unstyled small"><li><a href="#cursos" class="text-secondary text-decoration-none">Todos os cursos</a></li><li><a href="#sobre" class="text-secondary text-decoration-none">Sobre o professor</a></li><li><a href="#faq" class="text-secondary text-decoration-none">Perguntas frequentes</a></li></ul></div><div class="col-md-3"><h6 class="text-white">Contato direto</h6><p class="small mb-1"><i class="bi bi-envelope"></i> valdomiro.ramoss@gmail.com</p><p class="small"><i class="bi bi-whatsapp"></i> (11) 98196-4264</p></div></div><hr class="bg-secondary"><div class="text-center small text-secondary">© 2025 Valdomiro Ramos · Cursos vendidos via Hotmart</div></div></footer>
+
+<!-- MODAL (pop-up) para exibir detalhes do curso -->
+<div class="modal fade" id="cursoModal" tabindex="-1" aria-labelledby="cursoModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-lg modal-dialog-scrollable">
+    <div class="modal-content">
+      <div class="modal-header" style="background: #2b5e3b; color: white;">
+        <h5 class="modal-title fw-bold" id="cursoModalLabel">Detalhes do Curso</h5>
+        <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Fechar"></button>
+      </div>
+      <div class="modal-body" id="modalBodyContent">
+        <!-- O conteúdo será injetado via JavaScript -->
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fechar</button>
+        <a href="#" id="modalBuyLink" target="_blank" class="btn btn-primary-custom">Comprar na Hotmart →</a>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+<script>
+  // ============================================================
+  // LISTA DE CURSOS – Agora com campo "descricaoCompleta"
+  // ============================================================
+  const cursos = [
+    {
+      titulo: "Aprenda Windows 11 do zero - Sistema Operacional",
+      descricao: "Domine o Windows para usar o computador de forma prática.",
+      descricaoCompleta: `Aqui, você vai entender como o Windows funciona e aprender a usar recursos como o Windows Explorer, que facilita a organização de arquivos e pastas. Vai descobrir como personalizar o visual do seu computador, alterando temas, cores e o fundo da área de trabalho, deixando tudo com a sua cara. Também vamos explorar ferramentas úteis como a calculadora, o WordPad e até mesmo a captura de tela.
+
+Além disso, você aprenderá a configurar as principais funções do Windows, como ajustar data e hora, usar o teclado e gerenciar suas janelas. E claro, tudo isso com dicas e truques que vão tornar seu uso do computador mais eficiente e agradável.`,
+      imageUrl: "/images/logo_modelagem.svg",
+      hotmartLink: "https://pay.hotmart.com/W105763863M",
+      categoria: "Sistema Operacional"
+    },
+    {
+      titulo: "Microsoft Access Completo",
+      descricao: "Crie bancos de dados relacionais, formulários, consultas avançadas e relatórios. Curso para iniciantes e avançados.",
+      descricaoCompleta: `Este curso de Microsoft Access foi desenvolvido para ensinar, de forma prática e acessível, como criar e gerenciar bancos de dados relacionais, mesmo sem conhecimento prévio. O aluno aprenderá desde os primeiros passos, como estruturar tabelas com campos apropriados, até a definição de chaves primárias e a criação de relacionamentos entre tabelas, garantindo organização, integridade e eficiência no armazenamento das informações.
+
+Durante as aulas, serão abordados os principais recursos do Access, com destaque para os formulários, que facilitam o cadastro e a navegação entre os dados; as consultas, que permitem buscar, filtrar e combinar informações conforme critérios específicos; e os relatórios, fundamentais para apresentar os dados de forma clara, resumida e profissional, prontos para impressão ou exportação.
+
+Também será ensinada a criação de macros para automatizar tarefas simples e repetitivas, aumentando a produtividade no uso do sistema, sem a necessidade de programação. O curso ainda abordará a personalização de formulários e relatórios, validação de dados e uso eficiente de filtros e ordenações.
+
+Com exemplos práticos, linguagem acessível e aplicação em situações reais do dia a dia, o curso é ideal para estudantes, profissionais de diversas áreas e qualquer pessoa que deseje organizar dados com eficiência. Ao final do curso, o aluno terá domínio das ferramentas essenciais do Access e será capaz de construir soluções completas, seguras e organizadas para o controle e análise de dados.`,
+      imageUrl: "/images/logo_acces.jpg",  // coloque URL da imagem
+      hotmartLink: "https://pay.hotmart.com/W105758300A",
+      categoria: "Banco de Dados"
+    },
+    {
+      titulo: "Excel Avançado & Dashboard",
+      descricao: "Tabelas dinâmicas, funções avançadas, power query e dashboards.",
+      descricaoCompleta: `Domine o Excel desde funções avançadas (PROCV, ÍNDICE, CORRESP, condicionais, estatísticas) até tabelas dinâmicas, gráficos dinâmicos, power query para transformação de dados, macros e VBA para automação. Você também aprenderá a criar dashboards profissionais com segmentações de dados, controles de formulário e indicadores visuais. Ideal para profissionais que lidam com grandes volumes de dados e precisam de relatórios eficientes.`,
+      imageUrl: "/images/logo_excel.jpg",
+      hotmartLink: "https://pay.hotmart.com/X105552179G",
+      categoria: "Planilha eletrônica"
+    },	
+   {
+      titulo: "Word Básico ao Avançado",
+      descricao: "Formatando textos, criar mala direta,definição de paragráfos.",
+      descricaoCompleta: `Este curso do Word office 365 foi feito para pessoas que não tem conhecimento algum desse editor de texto até aqueles que já têm conhecimento para a criação de pequenos textos, porque neste curso vocês irão aprender recursos básicos e também alguns recursos avançados. Desde uma configuração de uma página simples passando por formatações de texto criação e manipulação de tabelas, utilização de imagens até mesmo um recurso clássico que é a mala direta.
+Vocês podem ter certeza que este curso irá agregar no currículo de pessoas que trabalham em áreas específicas (dentista,advogado, consultor,operador, secretariado, dentre outros) até mesmo para quem gostaria de ganhar algum dinheiro fazendo trabalhos extras (edição de textos, criação de mala direta, geração de currículos), Textos em páginas para controle de (cabeleireiros, vendedores externos, pequenos negócios de varejo indústria), onde vocês poderão negociar Trabalhos com os recursos que vocês irão aprender.
+É muito importante também a ressaltar é que mesmo para aqueles que tenham as versões anteriores do Word Também poderão usufruir dos recursos apresentados neste curso, pois o foco dos recursos das aulas apresentadas trata-se de recursos tradicionais do Word porém de grande utilidade.
+
+Boa sorte e aguardo vocês para fazer esse treinamento do Word Office 365
+`,
+      imageUrl: "/images/logo_word.cdr.jpg",
+      hotmartLink: "https://pay.hotmart.com/Q89279890U",
+      categoria: "Editor de textos"
+    },
+   {
+      titulo: "Powerpoint do Básico ao avançado",
+      descricao: "Transforme Suas Apresentações: Dicas e Técnicas de Design Profissional para Criar Slides Impactantes e Engajadores",
+      descricaoCompleta: `Neste curso de PowerPoint, você vai aprender a criar apresentações incríveis, com uma abordagem prática e objetiva. Vamos começar pelos fundamentos, ensinando como inserir textos, imagens, gráficos e ícones de maneira simples. Depois, exploraremos recursos mais avançados, como formatação de slides, aplicação de animações e transições, além de técnicas para organizar conteúdos de forma clara e atrativa.
+
+Você vai descobrir como transformar suas ideias em apresentações profissionais e impactantes, com dicas valiosas sobre design, escolha de cores, fontes e alinhamento de elementos. Além disso, aprenderá a utilizar os modos de exibição e ferramentas de revisão para garantir a qualidade final do seu trabalho. Para quem precisa de impressões, veremos como configurar o PowerPoint para criar folhetos e notas.`,
+      imageUrl: "/images/logo_ppt.jpg",
+      hotmartLink: "https://pay.hotmart.com/V105667082A",
+      categoria: "Apresentação/Slides"
+    },	
+	
+    {
+      titulo: "SSIS- Integration Services - Intermediário -Modulo I",
+      descricao: "Aprendendo Integração de dados com o SSIS do Inicio ao Fim.",
+      descricaoCompleta: `Neste curso você irá apreender a utilizar a ferramenta SSIS da Microsoft na versão  Visual Studio Comunity 2019. Você sairá apto a trabalhar com integração de dados e preparado para  área de TI no que diz respeito a integração de dados. O SSIS faz parte de metodologia/Matéria ETL, atualmente muito utilizado para quem trabalha ou quer entrar no mundo de Business Intelligence.
+
+Com o aprendizado adquirido será possível o aluno fazer integrações com diversos bancos de dados e também  a importar e exportar dados de bancos de dados , arquivos CSV, arquivos Excel.
+
+O Curso tem o foco em integrações de dados com banco de dados SQL server , porém com a metodologia do curso aplicada será possível fazer integrações com múltiplos bancos de dados.`,
+      imageUrl: "/images/ssis_logo.jpg",
+      hotmartLink: "https://pay.hotmart.com/F64072348Y",
+      categoria: "Business Inteligence"
+    }
+  ];
+
+  // Função para renderizar os cards
+  const container = document.getElementById('cursosGrid');
+  if (container) {
+    cursos.forEach((curso, index) => {
+      const imgHtml = curso.imageUrl 
+        ? `<img src="${curso.imageUrl}" class="course-img" alt="${curso.titulo}" style="object-fit:cover;">` 
+        : `<div class="course-img d-flex justify-content-center align-items-center bg-light"><i class="bi bi-file-earmark-code" style="font-size: 3rem; color:#2b5e3b;"></i></div>`;
+
+      const card = `
+        <div class="col-md-6 col-lg-4">
+          <div class="course-card">
+            ${imgHtml}
+            <div class="p-3">
+              <span class="badge-category">${curso.categoria}</span>
+              <h4 class="fw-bold mt-2 fs-5">${curso.titulo}</h4>
+              <p class="small text-secondary">${curso.descricao}</p>
+              <div class="d-flex justify-content-between align-items-center mt-3">
+                <button class="btn btn-sm btn-outline-custom px-3" onclick="abrirDetalhes(${index})">Saiba mais</button>
+                <a href="${curso.hotmartLink}" target="_blank" class="btn btn-buy">Comprar na Hotmart →</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      `;
+      container.innerHTML += card;
+    });
+  }
+
+  // Função global para abrir o modal com os detalhes do curso
+  window.abrirDetalhes = function(indice) {
+    const curso = cursos[indice];
+    if (!curso) return;
+
+    // Preenche o título do modal
+    document.getElementById('cursoModalLabel').innerText = curso.titulo + " - Detalhes completos";
+    
+    // Formata a descrição completa com quebras de linha (substituindo \n por <br>)
+    const descricaoFormatada = curso.descricaoCompleta ? curso.descricaoCompleta.replace(/\n/g, '<br>') : "Descrição detalhada em breve.";
+    
+    // Monta o conteúdo do modal
+    const modalBody = `
+      <h5 class="fw-bold text-success">📘 Sobre o curso:</h5>
+      <p>${descricaoFormatada}</p>
+      <hr>
+      <h6 class="fw-bold">🎯 O que você vai aprender:</h6>
+      <ul>
+        <li>Conceitos teóricos e práticos desde o básico</li>
+        <li>Exercícios e projetos reais</li>
+        <li>Acesso vitalício e suporte direto com o professor</li>
+        <li>Certificado de conclusão com carga horária</li>
+      </ul>
+    `;
+    document.getElementById('modalBodyContent').innerHTML = modalBody;
+    
+    // Define o link de compra no rodapé do modal
+    document.getElementById('modalBuyLink').href = curso.hotmartLink;
+    
+    // Abre o modal usando Bootstrap
+    const modal = new bootstrap.Modal(document.getElementById('cursoModal'));
+    modal.show();
+  };
+</script>
+</body>
+</html>
