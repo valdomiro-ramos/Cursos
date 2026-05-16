@@ -61,6 +61,16 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     .video-carousel-card:hover .video-thumb img { opacity: 0.6; }
     .play-overlay { position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); font-size: 3rem; color: white; text-shadow: 0 2px 10px rgba(0,0,0,0.5); pointer-events: none; }
     .carousel-control-prev-icon, .carousel-control-next-icon { background-color: #2b5e3b; border-radius: 50%; padding: 1.2rem; background-size: 50%; }
+    .hero-image {
+      border-radius: 1.5rem;
+      box-shadow: 0 20px 30px -15px rgba(0,0,0,0.1);
+      transition: transform 0.3s ease;
+      width: 100%;
+      height: auto;
+    }
+    .hero-image:hover {
+      transform: scale(1.02);
+    }
     @media (max-width: 768px) {
       .hero h1 { font-size: 2rem; }
       .methodology-section { padding: 1.5rem; }
@@ -93,10 +103,11 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
   </div>
 </nav>
 
-<!-- HERO -->
+<!-- HERO COM IMAGEM INCORPORADA (texto + imagem local) -->
 <section class="hero">
   <div class="container">
-    <div class="row align-items-center g-4">
+    <div class="row align-items-center g-5">
+      <!-- Coluna esquerda: texto HTML (mantido original) -->
       <div class="col-lg-7">
         <h1 class="fw-bold display-5">Faça <span style="background: linear-gradient(120deg,#d8e8d0,#c0ddb2); padding:0 0.2rem;">Cursos e aulas On line</span> com um especialista com mais de 29 anos de experiência</h1>
         <p class="lead text-secondary mt-3">Cursos online com certificado, suporte direto e acesso vitalício. Comece hoje mesmo!</p>
@@ -105,19 +116,16 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
           <a href="#exemplosVideos" class="btn btn-outline-custom px-4 py-2">Exemplos de aulas →</a>
         </div>
       </div>
+      <!-- Coluna direita: imagem do diretório /images/logo_cursos.png -->
       <div class="col-lg-5 text-center">
-        <div class="bg-white p-4 rounded-4 shadow-sm">
-          <i class="bi bi-person-video3" style="font-size: 5rem; color:#2b5e3b;"></i>
-          <h3 class="fw-bold mt-2">Valdomiro Ramos</h3>
-          <p class="text-muted">Analista de Sistemas · Instrutor há 29+ anos</p>
-          <span class="badge bg-success bg-opacity-10 text-dark">+4500 alunos</span>
-        </div>
+        <img src="images/logo_cursos.png" alt="Valdomiro Cursos - Diferenciais e benefícios" class="hero-image" onerror="this.onerror=null; this.src='data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%22400%22%20height%3D%22300%22%20viewBox%3D%220%200%20400%20300%22%3E%3Crect%20width%3D%22400%22%20height%3D%22300%22%20fill%3D%22%23eef5e6%22%2F%3E%3Ctext%20x%3D%2250%25%22%20y%3D%2250%25%22%20text-anchor%3D%22middle%22%20fill%3D%22%232b5e3b%22%20font-family%3D%22monospace%22%20font-size%3D%2216%22%3EImagem%20n%C3%A3o%20encontrada%3C%2Ftext%3E%3C%2Fsvg%3E';">
+        <p class="text-muted mt-2 small">Certificação incluída · Suporte direto · Acesso vitalício</p>
       </div>
     </div>
   </div>
 </section>
 
-<!-- SEÇÃO EXEMPLOS DE AULAS (CARROSSEL) -->
+<!-- SEÇÃO EXEMPLOS DE AULAS (CARROSSEL) - mantida integralmente -->
 <section id="exemplosVideos" class="py-5">
   <div class="container">
     <div class="text-center mb-4">
@@ -238,7 +246,6 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
               </div>
             </div>
           </div>
-          <!-- Controles -->
           <button class="carousel-control-prev" type="button" data-bs-target="#videoCarousel" data-bs-slide="prev">
             <span class="carousel-control-prev-icon" aria-hidden="true"></span>
             <span class="visually-hidden">Anterior</span>
@@ -401,7 +408,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
       descricaoCompleta: `Este curso do Word foi feito para pessoas que não têm conhecimento desse editor de texto até aqueles que já possuem alguma experiência. Você irá aprender desde configuração de página, formatação de texto, criação e manipulação de tabelas, uso de imagens até recursos clássicos como mala direta. Ideal para profissionais de diversas áreas que desejam produzir documentos de qualidade.`,
       topicos: [
         { icone: "bi-layout-text-window", titulo: "Formatação de Texto", descricao: "Fontes, parágrafos, listas." },
-        { icone: "bi-table", titulo: "Tabelas e Imagens", descricao: "Inserção e manipulação." },
+        { icone: "bi-table", titulo: "Tabelas e Imagens", descricao: "Inserção e manipulación." },
         { icone: "bi-envelope", titulo: "Mala Direta", descricao: "Cartas e etiquetas em lote." },
         { icone: "bi-file-pdf", titulo: "Revisão e Impressão", descricao: "Cabeçalhos, rodapés." },
         { icone: "bi-briefcase", titulo: "Aplicações Práticas", descricao: "Currículos e documentos comerciais." }
