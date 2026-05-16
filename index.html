@@ -1,504 +1,221 @@
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
-<!-- Google Tag Manager -->
-<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-})(window,document,'script','dataLayer','GTM-ZJP58KCH');</script>
-<!-- End Google Tag Manager -->
-
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "ItemList",
-  "name": "Cursos de Informática",
-  "description": "Aprenda pacote Office completo: Excel, Word, PowerPoint e Windows com cursos práticos e objetivos.",
-  "itemListElement": [
-    {"@type": "Course","position": 1,"name": "Curso de Excel do Básico ao Avançado"},
-    {"@type": "Course","position": 2,"name": "Curso de Word Completo"},
-    {"@type": "Course","position": 3,"name": "Curso de PowerPoint para Apresentações Incríveis"},
-    {"@type": "Course","position": 4,"name": "Curso de Windows 11 e Produtividade"}
-  ]
-}
-</script>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
-  <title>Valdomiro Ramos | Cursos Online - Exemplos de Aulas</title>
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <title>OpenBI | Inteligência em Dados e Automação</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
-  <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;400;600;700;800&display=swap" rel="stylesheet">
   <style>
     * { font-family: 'Inter', sans-serif; }
-    body { background: #f5f7f2; }
-    .navbar { background: rgba(255,255,255,0.96); backdrop-filter: blur(4px); box-shadow: 0 2px 20px rgba(60,80,40,0.05); }
-    .navbar-brand { font-weight: 800; font-size: 1.7rem; background: linear-gradient(135deg, #2b5e3b, #4c8b4c); background-clip: text; -webkit-background-clip: text; color: transparent; }
-    .btn-primary-custom { background: #2b5e3b; border-radius: 40px; padding: 0.7rem 1.8rem; font-weight: 600; transition: all 0.2s; box-shadow: 0 4px 10px rgba(43,94,59,0.2); border: none; color: white; }
-    .btn-primary-custom:hover { background: #1e4529; transform: translateY(-2px); }
-    .btn-outline-custom { border: 2px solid #2b5e3b; color: #2b5e3b; border-radius: 40px; font-weight: 600; background: transparent; }
-    .btn-outline-custom:hover { background: #2b5e3b; color: white; }
-    .hero { background: linear-gradient(105deg, #ffffff 0%, #eef5e6 100%); padding: 4rem 0 3rem; border-bottom: 1px solid #d0e0c0; }
-    .badge-category { background: #e2f0e2; color: #2b5e3b; border-radius: 40px; font-weight: 500; padding: 0.3rem 1rem; font-size: 0.75rem; }
-    .course-card { border: none; border-radius: 1.5rem; background: white; transition: all 0.25s ease; box-shadow: 0 12px 25px -10px rgba(0,0,0,0.05); height: 100%; overflow: hidden; }
-    .course-card:hover { transform: translateY(-6px); box-shadow: 0 25px 30px -12px rgba(60,80,40,0.2); }
-    .course-img { height: 260px; object-fit: cover; width: 100%; background: #eef5e6; display: flex; align-items: center; justify-content: center; font-size: 3rem; color: #2b5e3b; }
-    .btn-buy { background: #2b5e3b; color: white; border-radius: 40px; padding: 0.5rem 1.3rem; font-weight: 500; font-size: 0.85rem; border: none; transition: 0.2s; }
-    .btn-buy:hover { background: #1e4529; transform: translateY(-2px); }
-    .methodology-section { background: white; border-radius: 2rem; padding: 3rem; box-shadow: 0 8px 25px rgba(0,0,0,0.02); }
-    .video-wrapper { position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; border-radius: 1rem; box-shadow: 0 10px 20px rgba(0,0,0,0.1); background: #000; }
-    .video-wrapper iframe { position: absolute; top: 0; left: 0; width: 100%; height: 100%; border: 0; }
-    .accordion-button:not(.collapsed) { background: #eef5e6; color: #2b5e3b; }
-    .accordion-button:focus { border-color: #4c8b4c; box-shadow: 0 0 0 0.25rem rgba(43,94,59,0.25); }
-    footer { background: #1a2e22; color: #cfdec4; }
-    .bloco-aprendizado { background: #f8faf7; border-radius: 1rem; padding: 1rem; transition: transform 0.2s; height: 100%; }
-    .bloco-aprendizado:hover { transform: translateY(-3px); background: #eef5e6; }
-    .bloco-aprendizado i { font-size: 2rem; color: #2b5e3b; }
-    .video-carousel-card { cursor: pointer; transition: transform 0.2s, box-shadow 0.2s; border-radius: 1rem; overflow: hidden; background: white; box-shadow: 0 8px 20px rgba(0,0,0,0.05); }
-    .video-carousel-card:hover { transform: translateY(-5px); box-shadow: 0 15px 30px rgba(0,0,0,0.1); }
-    .video-thumb { position: relative; background: #000; }
-    .video-thumb img { width: 100%; height: 200px; object-fit: cover; opacity: 0.8; transition: 0.3s; }
-    .video-carousel-card:hover .video-thumb img { opacity: 0.6; }
-    .play-overlay { position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); font-size: 3rem; color: white; text-shadow: 0 2px 10px rgba(0,0,0,0.5); pointer-events: none; }
-    .carousel-control-prev-icon, .carousel-control-next-icon { background-color: #2b5e3b; border-radius: 50%; padding: 1.2rem; background-size: 50%; }
-    .hero-image {
-      border-radius: 1.5rem;
-      box-shadow: 0 20px 30px -15px rgba(0,0,0,0.1);
-      transition: transform 0.3s ease;
-      width: 100%;
-      height: auto;
-    }
-    .hero-image:hover {
-      transform: scale(1.02);
-    }
-    @media (max-width: 768px) {
-      .hero h1 { font-size: 2rem; }
-      .methodology-section { padding: 1.5rem; }
-      .carousel-control-prev-icon, .carousel-control-next-icon { padding: 0.8rem; }
-    }
+    body { background-color: #f8fafc; scroll-behavior: smooth; }
+    .navbar { background-color: #ffffff; box-shadow: 0 4px 20px rgba(0,0,0,0.03); padding: 1rem 0; }
+    .navbar-brand { font-weight: 800; font-size: 1.8rem; color: #0a2b3e !important; }
+    .navbar-brand span { color: #2c7da0; }
+    .nav-link { font-weight: 500; color: #1e2f3a !important; }
+    .nav-link:hover { color: #2c7da0 !important; }
+    .btn-outline-custom { border: 2px solid #2c7da0; color: #2c7da0; border-radius: 40px; padding: 0.4rem 1.3rem; font-weight: 600; }
+    .btn-outline-custom:hover { background-color: #2c7da0; color: white; }
+    .btn-primary-custom { background-color: #1f5068; border: none; border-radius: 40px; padding: 0.6rem 2rem; font-weight: 600; transition: 0.2s; }
+    .btn-primary-custom:hover { background-color: #2c7da0; transform: translateY(-2px); box-shadow: 0 8px 18px rgba(44,125,160,0.2); }
+    .hero { padding: 5rem 0 4rem; background: linear-gradient(135deg, #f0f7fb 0%, #ffffff 100%); }
+    .hero h1 { font-weight: 800; font-size: 3rem; color: #0a2b3e; }
+    .hero .highlight { color: #2c7da0; border-bottom: 3px solid #ffb74d; }
+    .service-card { background: white; border-radius: 32px; padding: 2rem 1.5rem; height: 100%; transition: all 0.3s; border: 1px solid #e9f0f3; }
+    .service-card:hover { transform: translateY(-8px); border-color: #cde3ec; box-shadow: 0 20px 30px -12px rgba(44,125,160,0.15); }
+    .icon-bg { background-color: #e6f4f5; width: 70px; height: 70px; border-radius: 30px; display: inline-flex; align-items: center; justify-content: center; margin-bottom: 1.5rem; }
+    .icon-bg i { font-size: 2.2rem; color: #2c7da0; }
+    .badge-feature { background-color: #f0f6f9; color: #1f5068; font-weight: 500; padding: 0.4rem 1rem; border-radius: 50px; }
+    .why-section { background-color: #ffffff; border-radius: 48px; box-shadow: 0 8px 28px rgba(0,0,0,0.03); padding: 3rem 2rem; }
+    .contact-card { background: white; border-radius: 32px; padding: 2rem; box-shadow: 0 12px 30px rgba(0,0,0,0.05); border: 1px solid #eef3f6; }
+    .form-control, .form-select { border-radius: 20px; border: 1px solid #d4e2e8; padding: 0.7rem 1.2rem; }
+    .form-control:focus { border-color: #2c7da0; box-shadow: 0 0 0 3px rgba(44,125,160,0.2); }
+    footer { background-color: #0a2b3e; color: #cddfe6; }
+    .footer-link { color: #b6d0db; text-decoration: none; }
+    .footer-link:hover { color: white; }
+    @media (max-width: 768px) { .hero h1 { font-size: 2.2rem; } .hero { text-align: center; } }
   </style>
 </head>
 <body>
-<!-- Google Tag Manager (noscript) -->
-<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-ZJP58KCH" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
-<!-- NAVBAR -->
 <nav class="navbar navbar-expand-lg sticky-top">
   <div class="container">
-    <a class="navbar-brand" href="#">Valdomiro<span style="color:#4c8b4c;"> Cursos</span></a>
-    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+    <a class="navbar-brand" href="#">Open<span>BI</span></a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navOpenBI">
       <span class="navbar-toggler-icon"></span>
     </button>
-    <div class="collapse navbar-collapse" id="navbarNav">
-      <ul class="navbar-nav ms-auto gap-2">
-        <li class="nav-item"><a class="nav-link fw-semibold" href="#cursos">Cursos</a></li>
-        <li class="nav-item"><a class="nav-link fw-semibold" href="#exemplosVideos">Exemplos de aulas</a></li>
-        <li class="nav-item"><a class="nav-link fw-semibold" href="#metodologia">Como são as aulas</a></li>
-        <li class="nav-item"><a class="nav-link fw-semibold" href="#sobre">Professor</a></li>
-        <li class="nav-item"><a class="nav-link fw-semibold" href="#faq">Dúvidas</a></li>
-        <li class="nav-item"><a class="nav-link fw-semibold" href="#contato">Contato</a></li>
+    <div class="collapse navbar-collapse" id="navOpenBI">
+      <ul class="navbar-nav ms-auto mb-2 mb-lg-0 align-items-center gap-2">
+        <li class="nav-item"><a class="nav-link" href="#servicos">Serviços</a></li>
+        <li class="nav-item"><a class="nav-link" href="#diferenciais">Diferenciais</a></li>
+        <li class="nav-item"><a class="nav-link" href="#contato">Contato</a></li>
+        <li class="nav-item"><a class="btn btn-outline-custom ms-2" href="#contato">Solicitar Orçamento</a></li>
       </ul>
-      <a href="#cursos" class="btn btn-primary-custom ms-lg-3">Ver todos os cursos →</a>
     </div>
   </div>
 </nav>
 
-<!-- HERO COM IMAGEM INCORPORADA (texto + imagem local) -->
-<section class="hero">
+<section class="hero" id="home">
   <div class="container">
     <div class="row align-items-center g-5">
-      <!-- Coluna esquerda: texto HTML (mantido original) -->
-      <div class="col-lg-7">
-        <h1 class="fw-bold display-5">Faça <span style="background: linear-gradient(120deg,#d8e8d0,#c0ddb2); padding:0 0.2rem;">Cursos e aulas On line</span> com um especialista com mais de 29 anos de experiência</h1>
-        <p class="lead text-secondary mt-3">Cursos online com certificado, suporte direto e acesso vitalício. Comece hoje mesmo!</p>
-        <div class="d-flex gap-3 mt-4 flex-wrap">
-          <a href="#cursos" class="btn btn-primary-custom px-4 py-2">Ver catálogo completo</a>
-          <a href="#exemplosVideos" class="btn btn-outline-custom px-4 py-2">Exemplos de aulas →</a>
+      <div class="col-lg-6">
+        <span class="badge-feature d-inline-block mb-3"><i class="bi bi-graph-up"></i>  Dados que transformam</span>
+        <h1>Automação inteligente <br> para <span class="highlight">decisões mais rápidas</span></h1>
+        <p class="lead mt-4 mb-4">Da planilha ao aplicativo, soluções em Excel, integração de dados, Power BI e mobile.</p>
+        <div class="d-flex flex-wrap gap-3">
+          <a href="#contato" class="btn btn-primary-custom btn-lg">Fale com um especialista <i class="bi bi-arrow-right-short"></i></a>
+          <a href="#servicos" class="btn btn-outline-secondary btn-lg px-4 rounded-pill">Explorar serviços</a>
+        </div>
+        <div class="mt-4 d-flex flex-wrap gap-4">
+          <div><i class="bi bi-check-circle-fill text-success me-1"></i> <span class="small">+45 projetos entregues</span></div>
+          <div><i class="bi bi-star-fill text-warning me-1"></i> <span class="small">98% de satisfação</span></div>
         </div>
       </div>
-      <!-- Coluna direita: imagem do diretório /images/logo_cursos.png -->
-      <div class="col-lg-5 text-center">
-        <img src="images/logo_cursos.png" alt="Valdomiro Cursos - Diferenciais e benefícios" class="hero-image" onerror="this.onerror=null; this.src='data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%22400%22%20height%3D%22300%22%20viewBox%3D%220%200%20400%20300%22%3E%3Crect%20width%3D%22400%22%20height%3D%22300%22%20fill%3D%22%23eef5e6%22%2F%3E%3Ctext%20x%3D%2250%25%22%20y%3D%2250%25%22%20text-anchor%3D%22middle%22%20fill%3D%22%232b5e3b%22%20font-family%3D%22monospace%22%20font-size%3D%2216%22%3EImagem%20n%C3%A3o%20encontrada%3C%2Ftext%3E%3C%2Fsvg%3E';">
-        <p class="text-muted mt-2 small">Certificação incluída · Suporte direto · Acesso vitalício</p>
+      <div class="col-lg-6 text-center">
+        <img src="https://placehold.co/600x450/eef3f6/2c7da0?text=OpenBI+Solutions&font=montserrat" alt="dashboard" class="img-fluid rounded-4 shadow-sm">
       </div>
     </div>
   </div>
 </section>
 
-<!-- SEÇÃO EXEMPLOS DE AULAS (CARROSSEL) - mantida integralmente -->
-<section id="exemplosVideos" class="py-5">
-  <div class="container">
-    <div class="text-center mb-4">
-      <span class="badge-category"><i class="bi bi-play-btn-fill me-1"></i> Demonstrações</span>
-      <h2 class="fw-bold mt-3">Veja <span style="color:#2b5e3b;">exemplos de aulas</span></h2>
-      <p class="text-secondary col-lg-7 mx-auto">Assista a trechos reais dos cursos e veja a qualidade do conteúdo.</p>
-    </div>
-    <div class="row justify-content-center">
-      <div class="col-lg-10">
-        <div id="videoCarousel" class="carousel slide" data-bs-ride="carousel">
-          <div class="carousel-inner">
-            <!-- Slide 1 - Access -->
-            <div class="carousel-item active">
-              <div class="row g-4 justify-content-center">
-                <div class="col-md-8 col-lg-6">
-                  <div class="video-carousel-card" data-bs-toggle="modal" data-bs-target="#videoModal" data-video-id="jgFbsJuAhhQ" data-video-title="Microsoft Access - Aula demonstrativa">
-                    <div class="video-thumb">
-                      <img src="https://img.youtube.com/vi/jgFbsJuAhhQ/maxresdefault.jpg" alt="Thumbnail Access" onerror="this.src='https://img.youtube.com/vi/jgFbsJuAhhQ/hqdefault.jpg'">
-                      <div class="play-overlay"><i class="bi bi-play-circle-fill"></i></div>
-                    </div>
-                    <div class="p-3">
-                      <h5 class="fw-bold">📊 Microsoft Access</h5>
-                      <p class="small text-secondary">Aula prática: criação de tabelas, consultas e formulários.</p>
-                      <span class="badge bg-success bg-opacity-10 text-success">Clique para assistir</span>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <!-- Slide 2 - Windows -->
-            <div class="carousel-item">
-              <div class="row g-4 justify-content-center">
-                <div class="col-md-8 col-lg-6">
-                  <div class="video-carousel-card" data-bs-toggle="modal" data-bs-target="#videoModal" data-video-id="WnIuTk3YmSs" data-video-title="Windows 11 - Dicas e ferramentas">
-                    <div class="video-thumb">
-                      <img src="https://img.youtube.com/vi/WnIuTk3YmSs/maxresdefault.jpg" alt="Thumbnail Windows" onerror="this.src='https://img.youtube.com/vi/WnIuTk3YmSs/hqdefault.jpg'">
-                      <div class="play-overlay"><i class="bi bi-play-circle-fill"></i></div>
-                    </div>
-                    <div class="p-3">
-                      <h5 class="fw-bold">🖥️ Windows 11</h5>
-                      <p class="small text-secondary">Organização de arquivos, personalização e produtividade.</p>
-                      <span class="badge bg-success bg-opacity-10 text-success">Clique para assistir</span>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <!-- Slide 3 - Excel -->
-            <div class="carousel-item">
-              <div class="row g-4 justify-content-center">
-                <div class="col-md-8 col-lg-6">
-                  <div class="video-carousel-card" data-bs-toggle="modal" data-bs-target="#videoModal" data-video-id="lTyE8OwNFC8" data-video-title="Excel Avançado - Aula demonstrativa">
-                    <div class="video-thumb">
-                      <img src="https://img.youtube.com/vi/lTyE8OwNFC8/maxresdefault.jpg" alt="Thumbnail Excel" onerror="this.src='https://img.youtube.com/vi/lTyE8OwNFC8/hqdefault.jpg'">
-                      <div class="play-overlay"><i class="bi bi-play-circle-fill"></i></div>
-                    </div>
-                    <div class="p-3">
-                      <h5 class="fw-bold">📈 Excel Avançado</h5>
-                      <p class="small text-secondary">Fórmulas, tabelas dinâmicas, dashboards e Power Query.</p>
-                      <span class="badge bg-success bg-opacity-10 text-success">Clique para assistir</span>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <!-- Slide 4 - Word -->
-            <div class="carousel-item">
-              <div class="row g-4 justify-content-center">
-                <div class="col-md-8 col-lg-6">
-                  <div class="video-carousel-card" data-bs-toggle="modal" data-bs-target="#videoModal" data-video-id="zPxoaJKdERM" data-video-title="Word Completo - Aula demonstrativa">
-                    <div class="video-thumb">
-                      <img src="https://img.youtube.com/vi/zPxoaJKdERM/maxresdefault.jpg" alt="Thumbnail Word" onerror="this.src='https://img.youtube.com/vi/zPxoaJKdERM/hqdefault.jpg'">
-                      <div class="play-overlay"><i class="bi bi-play-circle-fill"></i></div>
-                    </div>
-                    <div class="p-3">
-                      <h5 class="fw-bold">📝 Word Completo</h5>
-                      <p class="small text-secondary">Formatação, mala direta, sumários e dicas profissionais.</p>
-                      <span class="badge bg-success bg-opacity-10 text-success">Clique para assistir</span>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <!-- Slide 5 - PowerPoint -->
-            <div class="carousel-item">
-              <div class="row g-4 justify-content-center">
-                <div class="col-md-8 col-lg-6">
-                  <div class="video-carousel-card" data-bs-toggle="modal" data-bs-target="#videoModal" data-video-id="50LVWO69e7o" data-video-title="PowerPoint - Apresentações profissionais">
-                    <div class="video-thumb">
-                      <img src="https://img.youtube.com/vi/50LVWO69e7o/maxresdefault.jpg" alt="Thumbnail PowerPoint" onerror="this.src='https://img.youtube.com/vi/50LVWO69e7o/hqdefault.jpg'">
-                      <div class="play-overlay"><i class="bi bi-play-circle-fill"></i></div>
-                    </div>
-                    <div class="p-3">
-                      <h5 class="fw-bold">🎨 PowerPoint</h5>
-                      <p class="small text-secondary">Slides incríveis, animações, transições e design profissional.</p>
-                      <span class="badge bg-success bg-opacity-10 text-success">Clique para assistir</span>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <!-- Slide 6 - SSIS Integration Services -->
-            <div class="carousel-item">
-              <div class="row g-4 justify-content-center">
-                <div class="col-md-8 col-lg-6">
-                  <div class="video-carousel-card" data-bs-toggle="modal" data-bs-target="#videoModal" data-video-id="K7hkink5SG0" data-video-title="SSIS - Integration Services - Aula demonstrativa">
-                    <div class="video-thumb">
-                      <img src="https://img.youtube.com/vi/K7hkink5SG0/maxresdefault.jpg" alt="Thumbnail SSIS" onerror="this.src='https://img.youtube.com/vi/K7hkink5SG0/hqdefault.jpg'">
-                      <div class="play-overlay"><i class="bi bi-play-circle-fill"></i></div>
-                    </div>
-                    <div class="p-3">
-                      <h5 class="fw-bold">🔄 SSIS - Integration Services</h5>
-                      <p class="small text-secondary">Integração de dados, ETL, importação/exportação e fluxo de dados.</p>
-                      <span class="badge bg-success bg-opacity-10 text-success">Clique para assistir</span>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-          <button class="carousel-control-prev" type="button" data-bs-target="#videoCarousel" data-bs-slide="prev">
-            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-            <span class="visually-hidden">Anterior</span>
-          </button>
-          <button class="carousel-control-next" type="button" data-bs-target="#videoCarousel" data-bs-slide="next">
-            <span class="carousel-control-next-icon" aria-hidden="true"></span>
-            <span class="visually-hidden">Próximo</span>
-          </button>
-        </div>
-        <div class="text-center mt-3">
-          <span class="text-muted small"><i class="bi bi-chevron-left"></i> Deslize ou clique nas setas <i class="bi bi-chevron-right"></i></span>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- MODAL PARA VÍDEO (YouTube) -->
-<div class="modal fade" id="videoModal" tabindex="-1" aria-labelledby="videoModalLabel" aria-hidden="true">
-  <div class="modal-dialog modal-lg modal-dialog-centered">
-    <div class="modal-content">
-      <div class="modal-header" style="background: #2b5e3b; color: white;">
-        <h5 class="modal-title fw-bold" id="videoModalLabel">Assistir aula</h5>
-        <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Fechar"></button>
-      </div>
-      <div class="modal-body p-0">
-        <div class="ratio ratio-16x9">
-          <iframe id="youtubeIframe" src="" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-        </div>
-      </div>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fechar</button>
-      </div>
-    </div>
-  </div>
-</div>
-
-<!-- SEÇÃO METODOLOGIA COM VÍDEO (mantida) -->
-<section id="metodologia" class="py-5">
-  <div class="container">
-    <div class="methodology-section">
-      <div class="row align-items-center g-5">
-        <div class="col-lg-6">
-          <span class="badge-category mb-3 d-inline-block"><i class="bi bi-play-circle-fill me-1"></i> Aula demonstrativa</span>
-          <h2 class="fw-bold display-6">Como são os cursos e aulas?</h2>
-          <p class="lead mt-3 text-secondary">Aprenda de forma prática, com exemplos reais e suporte direto com o professor. Cada curso é dividido em módulos progressivos.</p>
-          <div class="row mt-4 g-3">
-            <div class="col-sm-6"><div class="d-flex align-items-center gap-2"><i class="bi bi-camera-reels fs-3 text-success"></i><span><strong>Aulas gravadas</strong><br>em alta definição</span></div></div>
-            <div class="col-sm-6"><div class="d-flex align-items-center gap-2"><i class="bi bi-chat-dots fs-3 text-success"></i><span><strong>Suporte direto</strong><br>com o professor</span></div></div>
-            <div class="col-sm-6"><div class="d-flex align-items-center gap-2"><i class="bi bi-file-pdf fs-3 text-success"></i><span><strong>Material para download</strong><br>exercícios guiados</span></div></div>
-            <div class="col-sm-6"><div class="d-flex align-items-center gap-2"><i class="bi bi-trophy fs-3 text-success"></i><span><strong>Certificado válido</strong><br>carga horária inclusa</span></div></div>
-          </div>
-          <div class="mt-4"><a href="#cursos" class="btn btn-primary-custom px-4">Conhecer os cursos agora →</a></div>
-        </div>
-        <div class="col-lg-6">
-          <div class="video-wrapper"><iframe src="https://www.youtube.com/embed/tpW5raDw0hk" title="Apresentação" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div>
-          <p class="text-muted text-center mt-3 small">Assista ao vídeo e veja como as aulas são dinâmicas e práticas.</p>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- TODOS OS CURSOS - com todos os 6 cursos -->
-<section id="cursos" class="py-5">
-  <div class="container">
+<section id="servicos" class="py-5">
+  <div class="container py-4">
     <div class="text-center mb-5">
-      <span class="badge bg-success bg-opacity-10 text-success px-3 py-2 rounded-pill">Catálogo profissional</span>
-      <h2 class="fw-bold mt-3">Todos os <span style="color:#2b5e3b;">cursos disponíveis</span></h2>
-      <p class="text-secondary col-lg-7 mx-auto">Clique em "Saiba mais" para ver os detalhes completos de cada curso.</p>
+      <span class="badge-feature d-inline-block mb-2"><i class="bi bi-cpu"></i>  Nossas especialidades</span>
+      <h2 class="fw-bold display-6 mb-3">Soluções sob medida</h2>
+      <p class="text-secondary w-75 mx-auto">Quatro pilares tecnológicos para escalar com inteligência.</p>
     </div>
-    <div class="row g-4" id="cursosGrid"></div>
+    <div class="row g-4">
+      <div class="col-md-6 col-lg-3"><div class="service-card text-center"><div class="icon-bg mx-auto"><i class="bi bi-file-spreadsheet-fill"></i></div><h3>Automação em Excel</h3><p>Macros, Power Query e dashboards automáticos.</p></div></div>
+      <div class="col-md-6 col-lg-3"><div class="service-card text-center"><div class="icon-bg mx-auto"><i class="bi bi-diagram-3-fill"></i></div><h3>Integração de Dados</h3><p>Conecte ERPs, CRMs, APIs e bancos.</p></div></div>
+      <div class="col-md-6 col-lg-3"><div class="service-card text-center"><div class="icon-bg mx-auto"><i class="bi bi-bar-chart-steps"></i></div><h3>Dashboards Power BI</h3><p>KPIs em tempo real e reports executivos.</p></div></div>
+      <div class="col-md-6 col-lg-3"><div class="service-card text-center"><div class="icon-bg mx-auto"><i class="bi bi-phone-fill"></i></div><h3>Aplicativos Mobile</h3><p>Android e iOS com integração nativa.</p></div></div>
+    </div>
   </div>
 </section>
 
-<!-- SOBRE O PROFESSOR -->
-<section id="sobre" class="py-5 bg-white">
+<section id="diferenciais" class="py-4 pb-5">
   <div class="container">
-    <div class="row g-5 align-items-center">
-      <div class="col-md-5 text-center">
-        <div class="bg-light rounded-4 p-4" style="background: #f4f8ef;"><i class="bi bi-award-fill" style="font-size: 4rem; color:#2b5e3b;"></i><h3 class="fw-bold mt-2">Valdomiro Ramos</h3><p>Graduado em Processamento de Dados - UNIMAR</p><hr><p><i class="bi bi-envelope"></i> valdomiro.ramoss@gmail.com</p><p><i class="bi bi-whatsapp"></i> (11) 98196-4264</p></div>
+    <div class="why-section">
+      <div class="row align-items-center">
+        <div class="col-lg-5"><span class="badge-feature"><i class="bi bi-gem"></i> Diferenciais</span><h2 class="fw-bold mt-3 mb-4">Criamos resultados, não só tecnologia.</h2><p class="text-secondary">Consultoria, segurança e suporte contínuo.</p></div>
+        <div class="col-lg-7"><div class="row g-3"><div class="col-sm-6"><div class="p-4 bg-white rounded-4 shadow-sm border"><i class="bi bi-clock-history fs-1" style="color:#2c7da0;"></i><h5 class="mt-3">Reduza 80% do tempo</h5></div></div><div class="col-sm-6"><div class="p-4 bg-white rounded-4 shadow-sm border"><i class="bi bi-graph-up fs-1" style="color:#2c7da0;"></i><h5 class="mt-3">Decisões orientadas a dados</h5></div></div></div></div>
       </div>
-      <div class="col-md-7"><span class="badge-category">+29 anos de experiência</span><h2 class="fw-bold mt-2">Ensino prático, focado no mercado</h2><p>Ajudei centenas de alunos a dominar Microsoft Access, SQL, Python, Microsoft Power BI, ETL, ferramentas de integração de dados, análise de dados e o Microsoft Office. Meus cursos são práticos, objetivos e focados no mercado, com exercícios reais, projetos aplicados e suporte personalizado. Você aprende no seu ritmo e ainda pode tirar dúvidas diretamente comigo durante o aprendizado.</p><div class="row mt-4"><div class="col-6"><i class="bi bi-check-circle-fill text-success"></i> Suporte por e-mail/WhatsApp</div><div class="col-6"><i class="bi bi-check-circle-fill text-success"></i> Certificado de conclusão</div><div class="col-6"><i class="bi bi-check-circle-fill text-success"></i> Projetos práticos</div><div class="col-6"><i class="bi bi-check-circle-fill text-success"></i> Acesso vitalício</div></div></div>
     </div>
   </div>
 </section>
 
-<!-- FAQ -->
-<section id="faq" class="py-5" style="background: #f5f7f2;"><div class="container"><div class="text-center mb-4"><h2 class="fw-bold">Dúvidas comuns</h2></div><div class="row justify-content-center"><div class="col-lg-8"><div class="accordion" id="faqAccordion"><div class="accordion-item"><h2 class="accordion-header"><button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#faq1">Como funciona o acesso?</button></h2><div id="faq1" class="accordion-collapse collapse show"><div class="accordion-body">Acesso imediato por e-mail após compra na Hotmart.</div></div></div><div class="accordion-item"><h2 class="accordion-header"><button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq2">Tem certificado?</button></h2><div id="faq2" class="accordion-collapse collapse"><div class="accordion-body">Sim, todos os cursos oferecem certificado.</div></div></div><div class="accordion-item"><h2 class="accordion-header"><button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq3">Posso tirar dúvidas com o professor?</button></h2><div id="faq3" class="accordion-collapse collapse"><div class="accordion-body">Sim, por e-mail ou WhatsApp.</div></div></div></div></div></div></div></section>
-
-<!-- CONTATO -->
-<section id="contato" class="py-5 bg-white"><div class="container text-center"><h2 class="fw-bold">Fale comigo diretamente</h2><p class="text-secondary mb-4">Antes de comprar, se precisar de orientação, é só chamar.</p><div class="d-flex justify-content-center gap-3 flex-wrap"><a href="mailto:valdomiro.ramoss@gmail.com" class="btn btn-outline-custom px-4"><i class="bi bi-envelope"></i> E-mail</a><a href="https://api.whatsapp.com/send?phone=5511981964264" target="_blank" class="btn btn-primary-custom px-4"><i class="bi bi-whatsapp"></i> WhatsApp (11) 98196-4264</a></div></div></section>
-
-<!-- FOOTER -->
-<footer class="pt-5 pb-4"><div class="container"><div class="row"><div class="col-md-5"><h4 class="text-white fw-bold">Valdomiro Ramos</h4><p class="small">Cursos de informática, bancos de dados e análise de dados com qualidade e suporte real.</p></div><div class="col-md-4"><h6 class="text-white">Links úteis</h6><ul class="list-unstyled small"><li><a href="#cursos" class="text-secondary text-decoration-none">Todos os cursos</a></li><li><a href="#sobre" class="text-secondary text-decoration-none">Professor</a></li><li><a href="#faq" class="text-secondary text-decoration-none">Dúvidas</a></li></ul></div><div class="col-md-3"><h6 class="text-white">Contato</h6><p class="small mb-1"><i class="bi bi-envelope"></i> valdomiro.ramoss@gmail.com</p><p class="small"><i class="bi bi-whatsapp"></i> (11) 98196-4264</p></div></div><hr class="bg-secondary"><div class="text-center small text-secondary">© 2025 Valdomiro Ramos · Cursos via Hotmart</div></div></footer>
-
-<!-- MODAL (pop-up) para exibir detalhes do curso -->
-<div class="modal fade" id="cursoModal" tabindex="-1" aria-labelledby="cursoModalLabel" aria-hidden="true">
-  <div class="modal-dialog modal-lg modal-dialog-scrollable">
-    <div class="modal-content">
-      <div class="modal-header" style="background: #2b5e3b; color: white;">
-        <h5 class="modal-title fw-bold" id="cursoModalLabel">Detalhes do Curso</h5>
-        <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Fechar"></button>
+<!-- CONTATO COM ENVIO REAL VIA WEB3FORMS -->
+<section id="contato" class="py-5">
+  <div class="container">
+    <div class="row g-5">
+      <div class="col-lg-5">
+        <div class="contact-card h-100">
+          <i class="bi bi-envelope-paper fs-1" style="color:#2c7da0;"></i>
+          <h2 class="fw-bold mt-3">Vamos conversar?</h2>
+          <p>Preencha o formulário. Sua mensagem chegará ao e-mail configurado.</p>
+          <hr><div><i class="bi bi-whatsapp fs-4" style="color:#25D366;"></i> <strong>WhatsApp:</strong> +55 (11) (em breve)</div>
+          <div class="mt-2"><i class="bi bi-envelope-fill"></i> <strong>E-mail:</strong> contato@openbiti.com</div>
+        </div>
       </div>
-      <div class="modal-body" id="modalBodyContent"></div>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fechar</button>
-        <a href="#" id="modalBuyLink" target="_blank" class="btn btn-primary-custom">Comprar na Hotmart →</a>
+      <div class="col-lg-7">
+        <div class="contact-card">
+          <h3><i class="bi bi-chat-text"></i> Solicitar orçamento</h3>
+          <form id="formContato" method="POST">
+            <input type="hidden" name="access_key" id="access_key_field" value="22069a4c-3bf5-4051-aa0f-d615d8fb808d">
+            <input type="hidden" name="to" id="to_email_field" value="valdomiro.ramoss@gmail.com">
+            <input type="hidden" name="subject" id="subject_field" value="Contato via OpenBI">
+            <div class="row g-3">
+              <div class="col-md-6"><label>Nome *</label><input type="text" name="name" class="form-control" required id="nome"></div>
+              <div class="col-md-6"><label>E-mail *</label><input type="email" name="email" class="form-control" required id="email"></div>
+              <div class="col-12"><label>Telefone</label><input type="tel" name="phone" class="form-control" id="telefone"></div>
+              <div class="col-12"><label>Serviço de interesse</label><select name="servico" class="form-select"><option>Automação em Excel</option><option>Integração de Dados</option><option>Dashboards Power BI</option><option>Aplicativos Mobile</option><option>Solução completa</option></select></div>
+              <div class="col-12"><label>Mensagem *</label><textarea name="message" rows="4" class="form-control" required id="mensagem"></textarea></div>
+              <div class="col-12"><button type="submit" class="btn btn-primary-custom w-100 py-2" id="btnEnviar">Enviar mensagem <i class="bi bi-send"></i></button></div>
+              <div id="statusMsg" class="alert d-none mt-2"></div>
+            </div>
+          </form>
+        </div>
       </div>
     </div>
   </div>
-</div>
+</section>
 
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+<footer class="pt-5 pb-4 mt-5">
+  <div class="container">
+    <div class="row gy-4">
+      <div class="col-md-5"><h4 class="fw-bold text-white">Open<span style="color:#7eb6cc;">BI</span></h4><p class="small">Automação e Business Intelligence.</p></div>
+      <div class="col-md-3"><h6 class="fw-bold text-white">Navegação</h6><ul class="list-unstyled"><li><a href="#servicos" class="footer-link">Serviços</a></li><li><a href="#contato" class="footer-link">Contato</a></li></ul></div>
+      <div class="col-md-4"><h6 class="fw-bold text-white">Contato</h6><ul class="list-unstyled small"><li><i class="bi bi-envelope me-2"></i> contato@openbiti.com</li><li><i class="bi bi-globe2 me-2"></i> www.openbiti.com.br</li></ul></div>
+    </div>
+    <hr class="mt-4"><div class="text-center small">&copy; 2025 OpenBI</div>
+  </div>
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
 <script>
-  // ========== LISTA COMPLETA COM 6 CURSOS ==========
-  const cursos = [
-    {
-      titulo: "Aprenda Windows 11 do zero - Sistema Operacional",
-      descricao: "Domine o Windows para usar o computador de forma prática.",
-      descricaoCompleta: `Aqui, você vai entender como o Windows funciona e aprender a usar recursos como o Windows Explorer, que facilita a organização de arquivos e pastas. Vai descobrir como personalizar o visual do seu computador, alterando temas, cores e o fundo da área de trabalho, deixando tudo com a sua cara. Também vamos explorar ferramentas úteis como a calculadora, o WordPad e até mesmo a captura de tela. Além disso, você aprenderá a configurar as principais funções do Windows, como ajustar data e hora, usar o teclado e gerenciar suas janelas. E claro, tudo isso com dicas e truques que vão tornar seu uso do computador mais eficiente e agradável.`,
-      topicos: [
-        { icone: "bi-folder-symlink", titulo: "Windows Explorer", descricao: "Organização eficiente de arquivos e pastas." },
-        { icone: "bi-palette", titulo: "Personalização", descricao: "Temas, cores, papel de parede." },
-        { icone: "bi-tools", titulo: "Ferramentas Úteis", descricao: "Calculadora, WordPad, Captura de tela." },
-        { icone: "bi-gear", titulo: "Configurações", descricao: "Data, hora, teclado, janelas." },
-        { icone: "bi-lightbulb", titulo: "Dicas e Truques", descricao: "Atalhos de produtividade." }
-      ],
-      imageUrl: "/images/logo_windows.png", hotmartLink: "https://pay.hotmart.com/W105763863M", categoria: "Sistema Operacional"
-    },
-    {
-      titulo: "Microsoft Access Completo",
-      descricao: "Crie bancos de dados relacionais, formulários, consultas avançadas e relatórios.",
-      descricaoCompleta: `Este curso de Microsoft Access foi desenvolvido para ensinar, de forma prática e acessível, como criar e gerenciar bancos de dados relacionais, mesmo sem conhecimento prévio. O aluno aprenderá desde os primeiros passos, como estruturar tabelas com campos apropriados, até a definição de chaves primárias e a criação de relacionamentos entre tabelas, garantindo organização, integridade e eficiência no armazenamento das informações. Durante as aulas, serão abordados os principais recursos do Access, com destaque para os formulários, que facilitam o cadastro e a navegação entre os dados; as consultas, que permitem buscar, filtrar e combinar informações conforme critérios específicos; e os relatórios, fundamentais para apresentar os dados de forma clara, resumida e profissional, prontos para impressão ou exportação. Também será ensinada a criação de macros para automatizar tarefas simples e repetitivas, aumentando a produtividade no uso do sistema, sem a necessidade de programação.`,
-      topicos: [
-        { icone: "bi-table", titulo: "Tabelas e Relacionamentos", descricao: "Chaves primárias, estrangeiras e integridade." },
-        { icone: "bi-search", titulo: "Consultas Avançadas", descricao: "Filtros, junções e consultas de ação." },
-        { icone: "bi-window", titulo: "Formulários", descricao: "Interface para cadastro e navegação." },
-        { icone: "bi-printer", titulo: "Relatórios Profissionais", descricao: "Apresentação de dados para impressão." },
-        { icone: "bi-robot", titulo: "Macros", descricao: "Automação de tarefas repetitivas." }
-      ],
-      imageUrl: "/images/logo_acces.jpg", hotmartLink: "https://pay.hotmart.com/W105758300A", categoria: "Banco de Dados"
-    },
-    {
-      titulo: "Excel Avançado & Dashboard",
-      descricao: "Tabelas dinâmicas, funções avançadas, power query e dashboards.",
-      descricaoCompleta: `Domine o Excel desde funções avançadas (PROCV, ÍNDICE, CORRESP, condicionais, estatísticas) até tabelas dinâmicas, gráficos dinâmicos, power query para transformação de dados, macros e VBA para automação. Você também aprenderá a criar dashboards profissionais com segmentações de dados, controles de formulário e indicadores visuais. Ideal para profissionais que lidam com grandes volumes de dados e precisam de relatórios eficientes.`,
-      topicos: [
-        { icone: "bi-functions", titulo: "Funções Avançadas", descricao: "PROCV, ÍNDICE, CORRESP." },
-        { icone: "bi-bar-chart-steps", titulo: "Tabelas Dinâmicas", descricao: "Análise rápida e gráficos." },
-        { icone: "bi-database", titulo: "Power Query", descricao: "Importação e transformação." },
-        { icone: "bi-code-slash", titulo: "Macros e VBA", descricao: "Automação de tarefas." },
-        { icone: "bi-speedometer2", titulo: "Dashboards", descricao: "Indicadores visuais interativos." }
-      ],
-      imageUrl: "/images/logo_excel.jpg", hotmartLink: "https://pay.hotmart.com/X105552179G", categoria: "Planilha eletrônica"
-    },
-    {
-      titulo: "Word Básico ao Avançado",
-      descricao: "Formatação de textos, mala direta, parágrafos e muito mais.",
-      descricaoCompleta: `Este curso do Word foi feito para pessoas que não têm conhecimento desse editor de texto até aqueles que já possuem alguma experiência. Você irá aprender desde configuração de página, formatação de texto, criação e manipulação de tabelas, uso de imagens até recursos clássicos como mala direta. Ideal para profissionais de diversas áreas que desejam produzir documentos de qualidade.`,
-      topicos: [
-        { icone: "bi-layout-text-window", titulo: "Formatação de Texto", descricao: "Fontes, parágrafos, listas." },
-        { icone: "bi-table", titulo: "Tabelas e Imagens", descricao: "Inserção e manipulación." },
-        { icone: "bi-envelope", titulo: "Mala Direta", descricao: "Cartas e etiquetas em lote." },
-        { icone: "bi-file-pdf", titulo: "Revisão e Impressão", descricao: "Cabeçalhos, rodapés." },
-        { icone: "bi-briefcase", titulo: "Aplicações Práticas", descricao: "Currículos e documentos comerciais." }
-      ],
-      imageUrl: "/images/logo_word.cdr.jpg", hotmartLink: "https://pay.hotmart.com/Q89279890U", categoria: "Editor de textos"
-    },
-    {
-      titulo: "Powerpoint do Básico ao Avançado",
-      descricao: "Apresentações profissionais, animações e design de slides.",
-      descricaoCompleta: `Neste curso de PowerPoint, você vai aprender a criar apresentações incríveis, com abordagem prática e objetiva. Começaremos pelos fundamentos: inserção de textos, imagens, gráficos e ícones. Depois exploraremos recursos avançados como animações, transições, design de slides e técnicas de alinhamento. Ao final, você produzirá apresentações impactantes e engajadoras.`,
-      topicos: [
-        { icone: "bi-images", titulo: "Inserção de Mídia", descricao: "Textos, imagens, gráficos." },
-        { icone: "bi-magic", titulo: "Animações e Transições", descricao: "Efeitos dinâmicos." },
-        { icone: "bi-palette", titulo: "Design e Layout", descricao: "Cores e fontes profissionais." },
-        { icone: "bi-eye", titulo: "Modos de Exibição", descricao: "Anotações e classificação." },
-        { icone: "bi-printer", titulo: "Impressão", descricao: "Folhetos e notas." }
-      ],
-      imageUrl: "/images/logo_ppt.jpg", hotmartLink: "https://pay.hotmart.com/V105667082A", categoria: "Apresentação/Slides"
-    },
-    {
-      titulo: "SSIS - Integration Services - Módulo I",
-      descricao: "Integração de dados ETL com SQL Server Integration Services.",
-      descricaoCompleta: `Neste curso você aprenderá a utilizar a ferramenta SSIS da Microsoft no Visual Studio Community. Você sairá apto a trabalhar com integração de dados, importação/exportação de CSV, Excel e bancos de dados. O SSIS é fundamental para quem deseja atuar com Business Intelligence e ETL.`,
-      topicos: [
-        { icone: "bi-box-arrow-in-down", titulo: "Importação/Exportação", descricao: "CSV, Excel, bancos." },
-        { icone: "bi-arrow-left-right", titulo: "Fluxo de Dados", descricao: "Transformações e mapeamentos." },
-        { icone: "bi-diagram-3", titulo: "Controle de Fluxo", descricao: "Containers e precedência." },
-        { icone: "bi-bug", titulo: "Depuração", descricao: "Tratamento de erros." },
-        { icone: "bi-cloud-upload", titulo: "Implantação", descricao: "Catálogo SSIS." }
-      ],
-      imageUrl: "/images/ssis_logo.jpg", hotmartLink: "https://pay.hotmart.com/F64072348Y", categoria: "Business Intelligence"
+  // Chave e e-mail já configurados (iguais aos campos ocultos)
+  const ACCESS_KEY = "22069a4c-3bf5-4051-aa0f-d615d8fb808d";
+  const DEST_EMAIL = "valdomiro.ramoss@gmail.com";
+
+  // Preenche os campos ocultos (redundante, mas consistente)
+  document.getElementById('access_key_field').value = ACCESS_KEY;
+  document.getElementById('to_email_field').value = DEST_EMAIL;
+
+  const form = document.getElementById('formContato');
+  const statusDiv = document.getElementById('statusMsg');
+  const btn = document.getElementById('btnEnviar');
+
+  form.addEventListener('submit', async (e) => {
+    e.preventDefault();
+
+    const nome = document.getElementById('nome').value.trim();
+    const email = document.getElementById('email').value.trim();
+    const mensagem = document.getElementById('mensagem').value.trim();
+    if (!nome || !email || !mensagem) {
+      showStatus('Preencha nome, e-mail e mensagem.', 'danger');
+      return;
     }
-  ];
 
-  // Renderiza os cards
-  const container = document.getElementById('cursosGrid');
-  if (container) {
-    cursos.forEach((curso, index) => {
-      const imgHtml = curso.imageUrl 
-        ? `<img src="${curso.imageUrl}" class="course-img" alt="${curso.titulo}">` 
-        : `<div class="course-img d-flex justify-content-center align-items-center bg-light"><i class="bi bi-file-earmark-code" style="font-size: 3rem; color:#2b5e3b;"></i></div>`;
-      const card = `
-        <div class="col-md-6 col-lg-4">
-          <div class="course-card">
-            ${imgHtml}
-            <div class="p-3">
-              <span class="badge-category">${curso.categoria}</span>
-              <h4 class="fw-bold mt-2 fs-5">${curso.titulo}</h4>
-              <p class="small text-secondary">${curso.descricao}</p>
-              <div class="d-flex justify-content-between align-items-center mt-3">
-                <button class="btn btn-sm btn-outline-custom px-3" onclick="abrirDetalhes(${index})">Saiba mais</button>
-                <a href="${curso.hotmartLink}" target="_blank" class="btn btn-buy">Comprar na Hotmart →</a>
-              </div>
-            </div>
-          </div>
-        </div>
-      `;
-      container.innerHTML += card;
-    });
+    const servicoSelect = document.querySelector('select[name="servico"]');
+    const servico = servicoSelect ? servicoSelect.value : 'Não informado';
+    document.getElementById('subject_field').value = `Contato de ${nome} - Interesse: ${servico}`;
+
+    const formData = new FormData(form);
+    formData.set('access_key', ACCESS_KEY);
+    formData.set('to', DEST_EMAIL);
+
+    btn.disabled = true;
+    btn.innerHTML = 'Enviando... <i class="bi bi-hourglass-split"></i>';
+
+    try {
+      const response = await fetch('https://api.web3forms.com/submit', {
+        method: 'POST',
+        body: formData
+      });
+      const result = await response.json();
+      if (result.success) {
+        showStatus('✅ Mensagem enviada com sucesso! Responderemos em breve.', 'success');
+        form.reset();
+      } else {
+        showStatus(`❌ Erro: ${result.message || 'Falha no envio. Tente novamente.'}`, 'danger');
+      }
+    } catch (error) {
+      showStatus('❌ Erro de conexão. Verifique sua internet.', 'danger');
+    } finally {
+      btn.disabled = false;
+      btn.innerHTML = 'Enviar mensagem <i class="bi bi-send"></i>';
+    }
+  });
+
+  function showStatus(msg, type) {
+    statusDiv.textContent = msg;
+    statusDiv.className = `alert alert-${type} mt-2`;
+    statusDiv.classList.remove('d-none');
+    setTimeout(() => statusDiv.classList.add('d-none'), 7000);
+    statusDiv.scrollIntoView({ behavior: 'smooth', block: 'center' });
   }
-
-  window.abrirDetalhes = function(indice) {
-    const curso = cursos[indice];
-    if (!curso) return;
-    document.getElementById('cursoModalLabel').innerText = curso.titulo + " - Detalhes completos";
-    const descricaoFormatada = curso.descricaoCompleta.replace(/\n/g, '<br>');
-    let blocosHtml = '<div class="mt-4 mb-3"><h5 class="fw-bold text-success"><i class="bi bi-star-fill me-1"></i> O que você vai aprender:</h5><div class="row g-3">';
-    curso.topicos.forEach(t => {
-      blocosHtml += `<div class="col-md-6"><div class="bloco-aprendizado"><i class="bi ${t.icone}"></i><h6 class="fw-bold mt-2">${t.titulo}</h6><p class="small text-secondary mb-0">${t.descricao}</p></div></div>`;
-    });
-    blocosHtml += '</div></div>';
-    document.getElementById('modalBodyContent').innerHTML = `<div class="mb-3"><h5 class="fw-bold text-success">📘 Sobre o curso:</h5><p>${descricaoFormatada}</p></div>${blocosHtml}<hr><div class="small text-muted text-center"><i class="bi bi-info-circle-fill"></i> Garantia de 7 dias · Suporte direto</div>`;
-    document.getElementById('modalBuyLink').href = curso.hotmartLink;
-    new bootstrap.Modal(document.getElementById('cursoModal')).show();
-  };
-
-  // Lógica para o modal de vídeo
-  const videoModal = document.getElementById('videoModal');
-  videoModal.addEventListener('show.bs.modal', function (event) {
-    const trigger = event.relatedTarget;
-    const videoId = trigger.getAttribute('data-video-id');
-    const videoTitle = trigger.getAttribute('data-video-title');
-    const iframe = document.getElementById('youtubeIframe');
-    iframe.src = `https://www.youtube.com/embed/${videoId}?autoplay=1`;
-    document.getElementById('videoModalLabel').innerText = videoTitle || 'Assistir aula';
-  });
-  videoModal.addEventListener('hidden.bs.modal', function () {
-    const iframe = document.getElementById('youtubeIframe');
-    iframe.src = '';
-  });
 </script>
 </body>
 </html>
