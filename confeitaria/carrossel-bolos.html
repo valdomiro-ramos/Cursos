@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="pt-BR" data-bs-theme="light">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Catálogo em Carrossel · Sweet Treats</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <style>
+        body { background-color: #fff9fc; }
+        .navbar, .footer { background-color: #f8e1f0 !important; }
+        .btn-pink {
+            background-color: #ff80b5;
+            border-color: #ff80b5;
+            color: white;
+        }
+        .btn-pink:hover {
+            background-color: #e6648a;
+            border-color: #e6648a;
+            color: white;
+        }
+        .text-pink { color: #ff80b5; }
+        .carousel-item img {
+            height: 500px;
+            object-fit: cover;
+            border-radius: 30px;
+        }
+        .carousel-caption {
+            background: rgba(0,0,0,0.6);
+            border-radius: 20px;
+            padding: 20px;
+            bottom: 20px;
+        }
+        @media (max-width: 768px) {
+            .carousel-item img { height: 300px; }
+            .carousel-caption h5 { font-size: 1.2rem; }
+        }
+        .carousel-control-prev-icon, .carousel-control-next-icon {
+            background-color: #ff80b5;
+            border-radius: 50%;
+            padding: 20px;
+        }
+    </style>
+</head>
+<body>
+
+    <nav class="navbar navbar-expand-lg py-3">
+        <div class="container">
+            <a class="navbar-brand fw-bold text-pink" href="index.html">
+                <i class="bi bi-cake2"></i> Sweet Treats
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="index.html">Início</a></li>
+                    <li class="nav-item"><a class="nav-link active" href="carrossel-bolos.html">Carrossel</a></li>
+                    <li class="nav-item"><a class="nav-link" href="index.html#sobre">Sobre</a></li>
+                    <li class="nav-item"><a class="nav-link" href="index.html#contato">Contato</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container my-5">
+        <h1 class="text-center text-pink fw-bold mb-4">🍰 Bolos em Destaque – Passe para o lado</h1>
+        <p class="text-center lead mb-5">Deslize ou use as setas para ver nossos 6 bolos exclusivos</p>
+
+        <div id="carrosselBolos" class="carousel slide carousel-fade" data-bs-ride="carousel">
+            <!-- Indicadores (bolinhas) -->
+            <div class="carousel-indicators">
+                <button type="button" data-bs-target="#carrosselBolos" data-bs-slide-to="0" class="active" aria-current="true"></button>
+                <button type="button" data-bs-target="#carrosselBolos" data-bs-slide-to="1"></button>
+                <button type="button" data-bs-target="#carrosselBolos" data-bs-slide-to="2"></button>
+                <button type="button" data-bs-target="#carrosselBolos" data-bs-slide-to="3"></button>
+                <button type="button" data-bs-target="#carrosselBolos" data-bs-slide-to="4"></button>
+                <button type="button" data-bs-target="#carrosselBolos" data-bs-slide-to="5"></button>
+            </div>
+
+            <!-- Slides -->
+            <div class="carousel-inner">
+                <!-- Bolo 1 - Red Velvet -->
+                <div class="carousel-item active">
+                    <img src="https://images.unsplash.com/photo-1586788224331-947f68671cf1?w=1200&h=500&fit=crop" class="d-block w-100" alt="Bolo Red Velvet">
+                    <div class="carousel-caption d-none d-md-block">
+                        <h5>Bolo Red Velvet</h5>
+                        <p>Massa aveludada com cream cheese e toque de cacau. Cobertura de frutas vermelhas.</p>
+                        <p class="fw-bold">R$ 99,90</p>
+                        <a href="https://wa.me/5511999999999?text=Quero pedir o Bolo Red Velvet (R$ 99,90)" class="btn btn-pink" target="_blank"><i class="bi bi-whatsapp"></i> Pedir agora</a>
+                    </div>
+                </div>
+                <!-- Bolo 2 - Floresta Negra -->
+                <div class="carousel-item">
+                    <img src="https://images.unsplash.com/photo-1571115177098-24ec42ed204d?w=1200&h=500&fit=crop" class="d-block w-100" alt="Bolo Floresta Negra">
+                    <div class="carousel-caption d-none d-md-block">
+                        <h5>Bolo Floresta Negra</h5>
+                        <p>Camadas de chocolate, cerejas em calda e chantilly. Finalizado com raspas de chocolate.</p>
+                        <p class="fw-bold">R$ 109,90</p>
+                        <a href="https://wa.me/5511999999999?text=Quero pedir o Bolo Floresta Negra (R$ 109,90)" class="btn btn-pink" target="_blank"><i class="bi bi-whatsapp"></i> Pedir agora</a>
+                    </div>
+                </div>
+                <!-- Bolo 3 - Ninho com Nutella -->
+                <div class="carousel-item">
+                    <img src="https://images.unsplash.com/photo-1627834377411-8da5f4f09de8?w=1200&h=500&fit=crop" class="d-block w-100" alt="Bolo Ninho com Nutella">
+                    <div class="carousel-caption d-none d-md-block">
+                        <h5>Bolo Ninho com Nutella</h5>
+                        <p>Massa de leite ninho, recheio cremoso de Nutella e cobertura de brigadeiro branco.</p>
+                        <p class="fw-bold">R$ 119,90</p>
+                        <a href="https://wa.me/5511999999999?text=Quero pedir o Bolo Ninho com Nutella (R$ 119,90)" class="btn btn-pink" target="_blank"><i class="bi bi-whatsapp"></i> Pedir agora</a>
+                    </div>
+                </div>
+                <!-- Bolo 4 - Limão com Morango -->
+                <div class="carousel-item">
+                    <img src="https://images.unsplash.com/photo-1550617931-e17a7b70dce2?w=1200&h=500&fit=crop" class="d-block w-100" alt="Bolo Limão com Morango">
+                    <div class="carousel-caption d-none d-md-block">
+                        <h5>Bolo de Limão com Morango</h5>
+                        <p>Massa cítrica, recheio de geleia de morango e buttercream de limão siciliano.</p>
+                        <p class="fw-bold">R$ 94,90</p>
+                        <a href="https://wa.me/5511999999999?text=Quero pedir o Bolo de Limão com Morango (R$ 94,90)" class="btn btn-pink" target="_blank"><i class="bi bi-whatsapp"></i> Pedir agora</a>
+                    </div>
+                </div>
+                <!-- Bolo 5 - Coco Queimado -->
+                <div class="carousel-item">
+                    <img src="https://images.unsplash.com/photo-1587668178277-295251f900ce?w=1200&h=500&fit=crop" class="d-block w-100" alt="Bolo Coco Queimado">
+                    <div class="carousel-caption d-none d-md-block">
+                        <h5>Bolo Coco Queimado</h5>
+                        <p>Massa de coco, calda de açúcar queimado e coco ralado caramelizado.</p>
+                        <p class="fw-bold">R$ 89,90</p>
+                        <a href="https://wa.me/5511999999999?text=Quero pedir o Bolo Coco Queimado (R$ 89,90)" class="btn btn-pink" target="_blank"><i class="bi bi-whatsapp"></i> Pedir agora</a>
+                    </div>
+                </div>
+                <!-- Bolo 6 - Café com Nozes -->
+                <div class="carousel-item">
+                    <img src="https://images.unsplash.com/photo-1590080875515-8a3a8dc5735e?w=1200&h=500&fit=crop" class="d-block w-100" alt="Bolo Café com Nozes">
+                    <div class="carousel-caption d-none d-md-block">
+                        <h5>Bolo Café com Nozes</h5>
+                        <p>Massa de café expresso, recheio de creme de nozes e cobertura de ganache amarga.</p>
+                        <p class="fw-bold">R$ 104,90</p>
+                        <a href="https://wa.me/5511999999999?text=Quero pedir o Bolo Café com Nozes (R$ 104,90)" class="btn btn-pink" target="_blank"><i class="bi bi-whatsapp"></i> Pedir agora</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Setas de navegação -->
+            <button class="carousel-control-prev" type="button" data-bs-target="#carrosselBolos" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Anterior</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carrosselBolos" data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Próximo</span>
+            </button>
+        </div>
+
+        <div class="text-center mt-5">
+            <a href="index.html" class="btn btn-outline-pink btn-lg"><i class="bi bi-arrow-left"></i> Voltar para página principal</a>
+        </div>
+    </div>
+
+    <footer class="footer mt-auto py-4">
+        <div class="container text-center">
+            <p class="mb-0 text-muted">© 2025 Sweet Treats – Doces e Bolos Artesanais.</p>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

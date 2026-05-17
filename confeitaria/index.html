@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="pt-BR" data-bs-theme="light">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Doces e bolos artesanais – sabores que encantam">
+    <title>Sweet Treats · Doces & Bolos</title>
+    <!-- Bootstrap 5.3 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Bootstrap Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <style>
+        html { scroll-behavior: smooth; }
+        body { background-color: #fff9fc; }
+        .navbar, .footer { background-color: #f8e1f0 !important; }
+        .btn-pink {
+            background-color: #ff80b5;
+            border-color: #ff80b5;
+            color: white;
+        }
+        .btn-pink:hover {
+            background-color: #e6648a;
+            border-color: #e6648a;
+            color: white;
+        }
+        .btn-outline-pink {
+            border-color: #ff80b5;
+            color: #ff80b5;
+        }
+        .btn-outline-pink:hover {
+            background-color: #ff80b5;
+            color: white;
+        }
+        .card {
+            border: none;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+        }
+        .card-img-top {
+            height: 220px;
+            object-fit: cover;
+        }
+        .text-pink { color: #ff80b5; }
+        .bg-pink-light { background-color: #ffe6f2; }
+        .hero {
+            background: linear-gradient(135deg, #ffe6f2 0%, #ffd9eb 100%);
+            padding: 4rem 0;
+            margin-bottom: 2rem;
+        }
+        .sobre-img {
+            max-height: 300px;
+            object-fit: cover;
+            border-radius: 20px;
+        }
+    </style>
+</head>
+<body>
+
+    <nav class="navbar navbar-expand-lg py-3">
+        <div class="container">
+            <a class="navbar-brand fw-bold text-pink" href="index.html">
+                <i class="bi bi-cake2"></i> Sweet Treats
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link active" href="index.html">Início</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#produtos">Produtos</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#sobre">Sobre</a></li>
+                    <li class="nav-item"><a class="nav-link" href="carrossel-bolos.html">Carrossel</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#contato">Contato</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <div class="hero">
+        <div class="container text-center py-5">
+            <h1 class="display-4 fw-bold text-pink">Doces que encantam</h1>
+            <p class="lead col-lg-8 mx-auto">Bolos, cupcakes, tortas e muito mais. Feitos com amor e ingredientes selecionados.</p>
+            <div class="mt-4">
+                <a href="https://wa.me/5511999999999?text=Olá! Gostaria de saber mais sobre os doces e bolos." class="btn btn-pink btn-lg px-4 me-2" target="_blank"><i class="bi bi-whatsapp"></i> Faça seu pedido</a>
+                <a href="#produtos" class="btn btn-outline-pink btn-lg px-4">Ver catálogo</a>
+            </div>
+        </div>
+    </div>
+
+    <div id="produtos" class="container">
+        <h2 class="text-center text-pink mb-5 fw-bold">Nossas especialidades</h2>
+        <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-4">
+            <!-- Card 1 -->
+            <div class="col">
+                <div class="card shadow-sm h-100">
+                    <img src="https://images.unsplash.com/photo-1558961363-fa8fdf82db35?w=500&h=300&fit=crop" class="card-img-top" alt="Bolo de chocolate">
+                    <div class="card-body">
+                        <h5 class="card-title">Bolo de Chocolate Premium</h5>
+                        <p class="card-text">Massa fofinha, recheio cremoso de brigadeiro e cobertura de ganache.</p>
+                        <div class="d-flex justify-content-between align-items-center">
+                            <div class="btn-group">
+                                <button class="btn btn-sm btn-outline-pink">Ver mais</button>
+                                <a href="https://wa.me/5511999999999?text=Quero pedir o Bolo de Chocolate Premium (R$ 89,90)" class="btn btn-sm btn-pink" target="_blank">Pedir</a>
+                            </div>
+                            <small class="text-muted">R$ 89,90</small>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Card 2 -->
+            <div class="col">
+                <div class="card shadow-sm h-100">
+                    <img src="https://images.unsplash.com/photo-1599785209707-a456fc1337bb?w=500&h=300&fit=crop" class="card-img-top" alt="Cupcake de morango">
+                    <div class="card-body">
+                        <h5 class="card-title">Cupcake de Morango</h5>
+                        <p class="card-text">Massa leve de baunilha, recheio de geleia de morango e buttercream rosê.</p>
+                        <div class="d-flex justify-content-between align-items-center">
+                            <div class="btn-group">
+                                <button class="btn btn-sm btn-outline-pink">Ver mais</button>
+                                <a href="https://wa.me/5511999999999?text=Quero pedir o Cupcake de Morango (R$ 12,90)" class="btn btn-sm btn-pink" target="_blank">Pedir</a>
+                            </div>
+                            <small class="text-muted">R$ 12,90</small>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Card 3 -->
+            <div class="col">
+                <div class="card shadow-sm h-100">
+                    <img src="https://images.unsplash.com/photo-1588195538326-c5b1e9f80a1b?w=500&h=300&fit=crop" class="card-img-top" alt="Torta de limão">
+                    <div class="card-body">
+                        <h5 class="card-title">Torta de Limão Siciliano</h5>
+                        <p class="card-text">Base crocante de biscoito, mousse suave de limão siciliano e suspiro.</p>
+                        <div class="d-flex justify-content-between align-items-center">
+                            <div class="btn-group">
+                                <button class="btn btn-sm btn-outline-pink">Ver mais</button>
+                                <a href="https://wa.me/5511999999999?text=Quero pedir a Torta de Limão Siciliano (R$ 69,90)" class="btn btn-sm btn-pink" target="_blank">Pedir</a>
+                            </div>
+                            <small class="text-muted">R$ 69,90</small>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Card 4 -->
+            <div class="col">
+                <div class="card shadow-sm h-100">
+                    <img src="https://images.unsplash.com/photo-1565958011703-44f9829ba187?w=500&h=300&fit=crop" class="card-img-top" alt="Donuts coloridos">
+                    <div class="card-body">
+                        <h5 class="card-title">Donuts Artesanais</h5>
+                        <p class="card-text">Massa macia, cobertura de chocolate branco e confeitos coloridos.</p>
+                        <div class="d-flex justify-content-between align-items-center">
+                            <div class="btn-group">
+                                <button class="btn btn-sm btn-outline-pink">Ver mais</button>
+                                <a href="https://wa.me/5511999999999?text=Quero pedir Donuts Artesanais (R$ 9,90)" class="btn btn-sm btn-pink" target="_blank">Pedir</a>
+                            </div>
+                            <small class="text-muted">R$ 9,90</small>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Card 5 -->
+            <div class="col">
+                <div class="card shadow-sm h-100">
+                    <img src="https://images.unsplash.com/photo-1603532648955-039310d9a75b?w=500&h=300&fit=crop" class="card-img-top" alt="Bolo de aniversário">
+                    <div class="card-body">
+                        <h5 class="card-title">Bolo de Aniversário</h5>
+                        <p class="card-text">Personalize com nome, idade e tema. Massas variadas.</p>
+                        <div class="d-flex justify-content-between align-items-center">
+                            <div class="btn-group">
+                                <button class="btn btn-sm btn-outline-pink">Ver mais</button>
+                                <a href="https://wa.me/5511999999999?text=Quero pedir um Bolo de Aniversário personalizado" class="btn btn-sm btn-pink" target="_blank">Pedir</a>
+                            </div>
+                            <small class="text-muted">A partir de R$ 109,90</small>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Card 6 -->
+            <div class="col">
+                <div class="card shadow-sm h-100">
+                    <img src="https://images.unsplash.com/photo-1551024506-0bccd828d307?w=500&h=300&fit=crop" class="card-img-top" alt="Macarons franceses">
+                    <div class="card-body">
+                        <h5 class="card-title">Macarons Franceses</h5>
+                        <p class="card-text">Casquinhas crocantes e recheio cremoso. Diversos sabores.</p>
+                        <div class="d-flex justify-content-between align-items-center">
+                            <div class="btn-group">
+                                <button class="btn btn-sm btn-outline-pink">Ver mais</button>
+                                <a href="https://wa.me/5511999999999?text=Quero pedir Macarons Franceses (R$ 29,90 - 6 un.)" class="btn btn-sm btn-pink" target="_blank">Pedir</a>
+                            </div>
+                            <small class="text-muted">R$ 29,90 (6 un.)</small>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="sobre" class="container mt-5 pt-5">
+        <div class="row align-items-center g-5">
+            <div class="col-md-6">
+                <img src="https://images.unsplash.com/photo-1505252585461-04db1eb84625?w=600&h=400&fit=crop" class="img-fluid sobre-img shadow" alt="Confeitaria tradicional">
+            </div>
+            <div class="col-md-6">
+                <h2 class="fw-bold text-pink">Sobre a Sweet Treats</h2>
+                <p class="lead">Há mais de <strong class="text-pink">30 anos</strong> encantando gerações.</p>
+                <p>Fundada em 1992, fomos os <strong>pioneiros na região</strong> em confeitaria artesanal de alta qualidade. Nossa tradição é manter o sabor caseiro usando ingredientes selecionados e muito amor.</p>
+                <a href="#contato" class="btn btn-pink mt-3"><i class="bi bi-chat-heart"></i> Venha nos conhecer</a>
+            </div>
+        </div>
+    </div>
+
+    <div class="bg-pink-light mt-5 py-5" id="contato">
+        <div class="container text-center">
+            <h2 class="fw-bold text-pink">Quer um bolo personalizado?</h2>
+            <p class="lead col-md-8 mx-auto">Peça um orçamento sem compromisso. Bolos para aniversários, casamentos, chá de bebê e muito mais!</p>
+            <a href="https://wa.me/5511999999999?text=Olá! Gostaria de um orçamento para bolo personalizado." class="btn btn-pink btn-lg px-5 mt-3" target="_blank"><i class="bi bi-whatsapp"></i> Fale conosco</a>
+        </div>
+    </div>
+
+    <footer class="footer mt-auto py-4">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6">
+                    <p class="mb-0 text-muted">© 2025 Sweet Treats – Doces e Bolos Artesanais.</p>
+                </div>
+                <div class="col-md-6 text-md-end">
+                    <a href="https://wa.me/5511999999999" class="text-muted me-3" target="_blank"><i class="bi bi-whatsapp"></i></a>
+                    <a href="#" class="text-muted me-3"><i class="bi bi-instagram"></i></a>
+                    <a href="#" class="text-muted me-3"><i class="bi bi-facebook"></i></a>
+                    <a href="#" class="text-muted"><i class="bi bi-envelope"></i></a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
